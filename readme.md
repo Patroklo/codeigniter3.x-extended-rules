@@ -8,7 +8,8 @@ Original code written by **devbro** (devbro@devbro.com).
 
 ## Requirements
 
-Codeigniter 2.x (version for Codeigniter 3 comming soon!)
+Codeigniter 3.x
+Php 5.2 or above
 
 
 ## Installation
