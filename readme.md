@@ -8,8 +8,7 @@ Original code written by **devbro** (devbro@devbro.com).
 
 ## Requirements
 
-Codeigniter 3.x 
-Php 5.3 or above.
+Codeigniter 2.x (version for Codeigniter 3 comming soon!)
 
 
 ## Installation
@@ -33,9 +32,25 @@ Use them as the other rules.
 * `file_image_exactdim[x,y]` Returns FALSE if the image is not the given dimension.
 * `is_exactly[list]` Check if the field's value is in the list.
 * `is_not[list]` Check if the field's value is not permitted.
+* `valid_hour[type]` Check if the field's value is a valid hour. [24H or 12H]
+* `valid_date[date_format]` Check if the field's value has a valid format. If not provided with a format, it will use the standard value..
+* `valid_range_date[date_format]` Check if the field's value has a valid range of two date formats. If not provided with a format, it will use the standard value..
+
 
 
 ## Change Log
+
+### 4.2:
+*	Added PHP 5.2 compatibility. Bettered the mime loading from config directory
+
+### 4.1:
+* Now the error field message shows all the error messages that it has and not only the first one.
+
+### 4.0:
+* Where there is a file upload, now file_required and required force the user to upload a file.
+* Added image icon mimes.
+* Added valid_date method that checks if a field has a valid date format.
+* Added valid_range_date method that checks if a field has a valid range of two dates.
 
 ### 3.2
 * Changed `valid_hour`rule to accept 24 and 12 hour format
