@@ -173,11 +173,13 @@ class MY_Form_validation extends CI_Form_validation {
 				if($postdata['error'] != UPLOAD_ERR_NO_FILE)
 				{
 					  $this->_error_array[$row['field']] = $this->file_upload_error_message($row['label'], $postdata['error']);
+					  $this->_field_data[$row['field']]['error'] = $this->file_upload_error_message($row['label'], $postdata['error']);
 					  return FALSE;
 				}
 				elseif($postdata['error'] == UPLOAD_ERR_NO_FILE and in_array('file_required', $rules))
 				{
 					  $this->_error_array[$row['field']] = $this->file_upload_error_message($row['label'], $postdata['error']);
+					  $this->_field_data[$row['field']]['error'] = $this->file_upload_error_message($row['label'], $postdata['error']);
 					  return FALSE;
 				}
 			}
