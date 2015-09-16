@@ -152,10 +152,24 @@ class MY_Form_validation extends CI_Form_validation {
 	function _execute($row, $rules, $postdata = NULL, $cycles = 0)
 	{
 		log_message('DEBUG','called MY_form_validation::_execute ' . $row['field']);
+
+		// Change based on
+		// https://github.com/Patroklo/codeigniter3.x-extended-rules/issues/2
+		// If the file it's not sent in the FILE array and it's required
+		// now will throw an error of required field if the $_FILES array
+		// doesn't hold any data of that field.
+
+		if(in_array('file_required', $rules) && !in_array('required', $rules) && !isset($_FILES[$row['field']]))
+		{
+			$rules[] = 'required';
+		}
+
+
 		//changed based on
 		//http://codeigniter.com/forums/viewthread/123816/P10/#619868
 		if(isset($_FILES[$row['field']]))
-		{// it is a file so process as a file
+		{
+			// it is a file so process as a file
 			log_message('DEBUG','processing as a file');
 			$postdata = $_FILES[$row['field']];
 
