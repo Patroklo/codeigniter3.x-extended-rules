@@ -20,7 +20,8 @@ $lang['error_stopped']					= "File upload stopped by extension";
 $lang['error_unexpected']				= "Unexpected file upload error. Error: {field}";
 $lang['valid_date']						= "The field {field} must be a valid date.";
 $lang['valid_range_date']				= "The field {field} must be a valid date range.";
-
+$lang['valid_geopos']                   = "The %s map doesn't have a correct position.";
+$lang['valid_multiple_geopos']          = "The %s map doesn't have a correct position.";
 
 /* End of file form_validation_lang.php */
 /* Location: ./system/language/spanish/form_validation_lang.php */

@@ -34,12 +34,16 @@ Use them as the other rules.
 * `is_exactly[list]` Check if the field's value is in the list.
 * `is_not[list]` Check if the field's value is not permitted.
 * `valid_hour[type]` Check if the field's value is a valid hour. [24H or 12H]
-* `valid_date[date_format]` Check if the field's value has a valid format. If not provided with a format, it will use the standard value..
-* `valid_range_date[date_format]` Check if the field's value has a valid range of two date formats. If not provided with a format, it will use the standard value..
-
+* `valid_date[date_format]` Check if the field's value has a valid format. If not provided with a format, it will use the standard value.
+* `valid_range_date[date_format]` Check if the field's value has a valid range of two date formats. If not provided with a format, it will use the standard value.
+* `valid_geopos[latitude;longitude]` Check if latitude and longitude parameters are valid.
+* `valid_multiple_geopos[json made of array of latitude;longitude]` Check if latitude and longitude parameters are valid.
 
 
 ## Change Log
+
+### 4.2.1:
+*   Added valid_geopos and valid_multiple_geopos
 
 ### 4.2:
 *	Added PHP 5.2 compatibility. Bettered the mime loading from config directory
@@ -53,15 +57,15 @@ Use them as the other rules.
 * Added valid_date method that checks if a field has a valid date format.
 * Added valid_range_date method that checks if a field has a valid range of two dates.
 
-### 3.2
+### 3.2:
 * Changed `valid_hour`rule to accept 24 and 12 hour format
 * Changed `file_allowed_type` and `file_disallowed_type` to use Mime type when possible instead of extension file.
 * Added more spanish and english translations.
 
-### 3.1
+### 3.1:
 * Add `valid_hour`rule.
 
-### 3.0
+### 3.0:
 * Upgraded and working with CodeIgniter 2.1.
 * Separated the error messages from the library and move them to `/application/language`
 * Added `is_exactly` and `is_not` rules.

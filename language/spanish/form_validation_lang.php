@@ -20,6 +20,8 @@ $lang['error_stopped']					= "Subida del archivo detenida por extensión.";
 $lang['error_unexpected']				= "Error inesperado de subida de archivo. Error: {field}";
 $lang['valid_date']						= "El campo {field} ha de contener una fecha válida.";
 $lang['valid_range_date']				= "El campo {field} ha de contener dos fechas válidas.";
+$lang['valid_geopos']                   = "El mapa %s no tiene una posición correcta";
+$lang['valid_multiple_geopos']          = "El mapa %s no tiene una posición correcta";
 
 /* End of file form_validation_lang.php */
 /* Location: ./system/language/spanish/form_validation_lang.php */
